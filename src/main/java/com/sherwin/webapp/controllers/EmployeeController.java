@@ -36,4 +36,10 @@ public class EmployeeController {
         log.info("Controller ===> getEmployees");
         return employeeService.getEmployees();
     }
+
+    @GetMapping("welcome")
+    public String message(){
+        log.info("Welcome");
+        return "Welcome";
+    }
 }
