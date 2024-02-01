@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    url: jdbc:sqlserver://sherwin-sql-db-server.database.windows.net:1433;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
+    username: sqlserveradmin
+    password: Miraclite#5637
+  jpa:
+    show-sq: true
+    hibernate:
+      ddl-auto: update
+      dialect: org.hibernate.dialect.SQLServer2012Dialect
+
+
+#      jdbc:sqlserver://sherwin-sql-db-server.database.windows.net:1433;database=sherwin-sql-db;user=sqlserveradmin@sherwin-sql-db-server;password={your_password_here};encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
+
