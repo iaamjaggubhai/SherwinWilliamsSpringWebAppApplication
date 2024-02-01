@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(path = "/employee")
 @Slf4j
 public class EmployeeController {
 
@@ -21,7 +20,7 @@ public class EmployeeController {
      * @param employee employee request body
      * @return Employee
      */
-    @PostMapping
+    @PostMapping(path = "new-employee")
     public Employee addEmployee(@RequestBody Employee employee){
         log.info("Controller ===> addEmployee {}",employee);
         return employeeService.addEmployee(employee);
@@ -31,13 +30,13 @@ public class EmployeeController {
      *
      * @return List<Employee>
      */
-    @GetMapping
+    @GetMapping(path = "/employees")
     public List<Employee> getEmployees(){
         log.info("Controller ===> getEmployees");
         return employeeService.getEmployees();
     }
 
-    @GetMapping("welcome")
+    @GetMapping
     public String message(){
         log.info("Welcome");
         return "Welcome";
